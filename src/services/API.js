@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://api.themoviedb.org/3';
+const BASE_URL = 'https://api.themoviedb.org/3';
 const API_KEY = '8f451d5cc6ee63c22b5aff4cdd29cef3';
 // `http://api.themoviedb.org/3/trending/all/day?api_key=8f451d5cc6ee63c22b5aff4cdd29cef3`;
 
