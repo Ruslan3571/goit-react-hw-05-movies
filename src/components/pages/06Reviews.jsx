@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useParams } from 'react-router-dom';
 import { getMovieReview } from 'services/API';
 
@@ -19,7 +18,6 @@ export const Reviews = () => {
 
   return (
     <>
-     
       <hr />
       {reviews.length > 0 ? (
         <ul>
