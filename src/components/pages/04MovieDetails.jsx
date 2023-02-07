@@ -35,7 +35,7 @@ export const MovieDetails = () => {
               <LazyLoadImage
                 src={
                   movie.backdrop_path
-                    ? `http://image.tmdb.org/t/p/w500/${movie.backdrop_path}`
+                    ? `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`
                     : 'https://upload.wikimedia.org/wikipedia/commons/3/35/Waiting_Room_-_The_Noun_Project.svg'
                 }
                 alt=""

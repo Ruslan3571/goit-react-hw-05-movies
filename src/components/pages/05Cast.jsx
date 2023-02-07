@@ -26,7 +26,7 @@ export const Cast = () => {
                 effect="blur"
                 src={
                   profile_path
-                    ? `http://image.tmdb.org/t/p/w500/${profile_path}`
+                    ? `https://image.tmdb.org/t/p/w500/${profile_path}`
                     : 'https://upload.wikimedia.org/wikipedia/commons/3/35/Waiting_Room_-_The_Noun_Project.svg'
                 }
                 alt="Actor avatar"
