@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { NavLink, useSearchParams } from 'react-router-dom';
 import { getMovie } from 'services/API';
+import Notiflix from 'notiflix';
 
 export const Movies = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -12,7 +13,9 @@ export const Movies = () => {
     try {
       getMovie(query).then(response => {
         if (response.data.results.length === 0) {
-          alert(`No results for ${query}`);
+          Notiflix.Notify.warning(`No results for ${query}`, {
+            position: 'center-top',
+          });
         }
         setMovie(response.data.results);
       });
@@ -46,7 +49,3 @@ export const Movies = () => {
     </div>
   );
 };
-//  if (response.data.results === []) {
-//    alert('error');
-//  }
-//  setMovie(response.data.results);
