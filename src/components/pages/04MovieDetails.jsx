@@ -1,12 +1,13 @@
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { NavLink, Outlet, useLocation, useParams } from 'react-router-dom';
 import { getMovieDetails } from 'services/API';
 
 export const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
-  const location = useLocation();
   const { movieId } = useParams();
+  const location = useLocation();
+  const ref = useRef(location.state?.from ?? '/movies');
 
   useEffect(() => {
     try {
@@ -26,7 +27,7 @@ export const MovieDetails = () => {
 
   return (
     <div style={{ marginLeft: '25px' }}>
-      <NavLink to={location.state?.from ?? '/'}>Go back</NavLink>
+      <NavLink to={ref.current}>Go back</NavLink>
 
       {movie && (
         <>
